@@ -1,0 +1,118 @@
+﻿<process name="choice stage" version="1.0" bpversion="7.0.1.49890" narrative="choice stage" byrefcollection="true" preferredid="038daaaf-4a66-4564-b797-72463fc0f9f0">
+  <view>
+    <camerax>0</camerax>
+    <cameray>21</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="3439c086-bf04-4c5b-a99b-570aa8a809a2" name="Start" type="Start">
+    <display x="15" y="-225" />
+    <onsuccess>edc32119-58f5-4d29-a739-18bb4282aa19</onsuccess>
+  </stage>
+  <stage stageid="f79b7121-3613-443f-98c5-8f1483182beb" name="End" type="End">
+    <display x="195" y="0" />
+  </stage>
+  <stage stageid="77ae910c-a4c5-4f52-b79f-6725d7767511" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="b47affbd-753e-450d-b8cb-3509ae73447e" name="Percentage" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="195" y="-210" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>123</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2e534cc6-dd63-44ab-b9e3-1a484d1d5865" name="Grade" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="195" y="-135" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="edc32119-58f5-4d29-a739-18bb4282aa19" name="Choice1" type="ChoiceStart">
+    <display x="15" y="-165" />
+    <groupid>75c147c1-4c56-49c7-bb77-9e43f0ffe995</groupid>
+    <choices>
+      <choice expression="[Percentage]&gt;=90 AND [Percentage]&lt;=100">
+        <name>Grade A</name>
+        <distance>30</distance>
+        <ontrue>37886ad7-fac8-4c42-bdb1-5a4bfe3b18b8</ontrue>
+      </choice>
+      <choice expression="[Percentage]&gt;=80 AND [Percentage]&lt;=89">
+        <name>Grade B </name>
+        <distance>75</distance>
+        <ontrue>74e75b6c-ddc4-4620-bea7-0c9f085ddbbd</ontrue>
+      </choice>
+      <choice expression="[Percentage]&gt;=70 AND [Percentage]&lt;=79">
+        <name>Grade C</name>
+        <distance>120</distance>
+        <ontrue>174efaa8-d978-4677-bc9b-5d244e380bd7</ontrue>
+      </choice>
+      <choice expression="[Percentage]&gt;=60 AND [Percentage]&lt;=69">
+        <name>Grade D</name>
+        <distance>180</distance>
+        <ontrue>0c5c0eec-638c-409f-acb5-fbdcffb03497</ontrue>
+      </choice>
+      <choice expression="[Percentage]&gt;=50 AND [Percentage]&lt;=59">
+        <name>Grade E</name>
+        <distance>240</distance>
+        <ontrue>04f91797-8f70-4f6f-b945-4e246eacb70a</ontrue>
+      </choice>
+      <choice expression="[Percentage]&gt;=0 AND [Percentage]&lt;=49">
+        <name>Grade F</name>
+        <distance>300</distance>
+        <ontrue>cd399b97-e41b-4336-996f-517cd5c1f063</ontrue>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="1795abbd-1add-4af1-ade0-c69ab0881e5c" name="Otherwise1" type="ChoiceEnd">
+    <display x="15" y="195" />
+    <onsuccess>70b9a5de-2479-4c0d-8acc-6ccf074f4bfc</onsuccess>
+    <groupid>75c147c1-4c56-49c7-bb77-9e43f0ffe995</groupid>
+  </stage>
+  <stage stageid="37886ad7-fac8-4c42-bdb1-5a4bfe3b18b8" name="Grade" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="75" y="-135" />
+    <onsuccess>f79b7121-3613-443f-98c5-8f1483182beb</onsuccess>
+    <calculation expression="&quot;Grade A&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="74e75b6c-ddc4-4620-bea7-0c9f085ddbbd" name="Grade B" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="75" y="-90" />
+    <onsuccess>f79b7121-3613-443f-98c5-8f1483182beb</onsuccess>
+    <calculation expression="&quot;Grade B&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="174efaa8-d978-4677-bc9b-5d244e380bd7" name="Grade C" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="75" y="-45" />
+    <onsuccess>f79b7121-3613-443f-98c5-8f1483182beb</onsuccess>
+    <calculation expression="&quot;Grade C&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="0c5c0eec-638c-409f-acb5-fbdcffb03497" name="Grade D" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="75" y="15" />
+    <onsuccess>f79b7121-3613-443f-98c5-8f1483182beb</onsuccess>
+    <calculation expression="&quot;Grade D&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="04f91797-8f70-4f6f-b945-4e246eacb70a" name="Grade E" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="75" y="75" />
+    <onsuccess>f79b7121-3613-443f-98c5-8f1483182beb</onsuccess>
+    <calculation expression="&quot;Grade E&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="cd399b97-e41b-4336-996f-517cd5c1f063" name="Grade F" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="75" y="135" />
+    <onsuccess>f79b7121-3613-443f-98c5-8f1483182beb</onsuccess>
+    <calculation expression="&quot;Grade F&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="70b9a5de-2479-4c0d-8acc-6ccf074f4bfc" name="Percentage Invalid" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="90" y="195" />
+    <onsuccess>f79b7121-3613-443f-98c5-8f1483182beb</onsuccess>
+    <calculation expression="&quot;Percentage Invalid&quot;" stage="Grade" />
+  </stage>
+</process>

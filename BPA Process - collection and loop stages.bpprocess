@@ -1,0 +1,154 @@
+﻿<process name="collection and loop stages" version="1.0" bpversion="7.0.1.49890" narrative="collection and loop satges" byrefcollection="true" preferredid="ada8c3c2-d403-4a64-8502-0eab6a3387c5">
+  <view>
+    <camerax>193</camerax>
+    <cameray>-21</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="bbb277cb-a575-4075-9544-8ccfe6175c34" name="Start" type="Start">
+    <display x="90" y="-285" />
+    <onsuccess>e1a870fb-a2de-4b23-8d20-878db24a073b</onsuccess>
+  </stage>
+  <stage stageid="98f46bc5-a32a-4923-9575-1b17cfc8b620" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="d2b8ed3f-b02b-41f1-a618-2be59ab03b9a" name="End" type="End">
+    <display x="390" y="90" />
+  </stage>
+  <stage stageid="1ed25121-b08e-48f1-a990-d3f03adba5f5" name="Choice1" type="ChoiceStart">
+    <display x="90" y="-195" />
+    <groupid>f36acfa7-d267-4ad5-959c-0270e1a2d33b</groupid>
+    <choices>
+      <choice expression="[Students.Percentage]&gt;=90 AND [Students.Percentage]&lt;=100">
+        <name>Grade A</name>
+        <distance>51.42857</distance>
+        <ontrue>c6e8087a-106b-469d-a0c0-c25918b6e4d6</ontrue>
+      </choice>
+      <choice expression="[Students.Percentage]&gt;=80 AND [Students.Percentage]&lt;=89">
+        <name>Grade B </name>
+        <distance>102.85714</distance>
+        <ontrue>9724874c-8bcb-44a5-9de2-35c94e138888</ontrue>
+      </choice>
+      <choice expression="[Students.Percentage]&gt;=70 AND [Students.Percentage]&lt;=79">
+        <name>Grade C</name>
+        <distance>154.2857</distance>
+        <ontrue>4e13ff43-3a1e-4f98-8a5f-aed658cdedfe</ontrue>
+      </choice>
+      <choice expression="[Students.Percentage]&gt;=60 AND [Students.Percentage]&lt;=69">
+        <name>Grade D</name>
+        <distance>205.714279</distance>
+        <ontrue>deaef610-7e31-46ef-bafa-4979f3bb38ba</ontrue>
+      </choice>
+      <choice expression="[Students.Percentage]&gt;=50 AND [Students.Percentage]&lt;=59">
+        <name>Grade E</name>
+        <distance>257.142853</distance>
+        <ontrue>1808e5fa-ea48-45f7-b86e-57b3332d2a53</ontrue>
+      </choice>
+      <choice expression="[Students.Percentage]&gt;=0 AND [Students.Percentage]&lt;=49">
+        <name>Grade F</name>
+        <distance>308.5714</distance>
+        <ontrue>60749271-baa0-4266-9b79-0c7f620f6ae5</ontrue>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="e129c38c-9d60-4d40-b4a2-53f4b76bf6fb" name="Otherwise1" type="ChoiceEnd">
+    <display x="90" y="165" />
+    <onsuccess>7b230a8e-1460-4a7a-9d74-4c05b8ca9142</onsuccess>
+    <groupid>f36acfa7-d267-4ad5-959c-0270e1a2d33b</groupid>
+  </stage>
+  <stage stageid="c6e8087a-106b-469d-a0c0-c25918b6e4d6" name="Grade A" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-165" />
+    <onsuccess>c336e903-e871-4bf3-811b-346c256cf003</onsuccess>
+    <calculation expression="&quot;Grade A&quot;" stage="Students.Grade" />
+  </stage>
+  <stage stageid="9724874c-8bcb-44a5-9de2-35c94e138888" name="Grade B" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-120" />
+    <onsuccess>c336e903-e871-4bf3-811b-346c256cf003</onsuccess>
+    <calculation expression="&quot;Grade B&quot;" stage="Students.Grade" />
+  </stage>
+  <stage stageid="4e13ff43-3a1e-4f98-8a5f-aed658cdedfe" name="Grade C" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-75" />
+    <onsuccess>c336e903-e871-4bf3-811b-346c256cf003</onsuccess>
+    <calculation expression="&quot;Grade C&quot;" stage="Students.Grade" />
+  </stage>
+  <stage stageid="deaef610-7e31-46ef-bafa-4979f3bb38ba" name="Grade D" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-15" />
+    <onsuccess>c336e903-e871-4bf3-811b-346c256cf003</onsuccess>
+    <calculation expression="&quot;Grade D&quot;" stage="Students.Grade" />
+  </stage>
+  <stage stageid="1808e5fa-ea48-45f7-b86e-57b3332d2a53" name="Grade E" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="45" />
+    <onsuccess>c336e903-e871-4bf3-811b-346c256cf003</onsuccess>
+    <calculation expression="&quot;Grade E&quot;" stage="Students.Grade" />
+  </stage>
+  <stage stageid="60749271-baa0-4266-9b79-0c7f620f6ae5" name="Grade F" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="150" y="105" />
+    <onsuccess>c336e903-e871-4bf3-811b-346c256cf003</onsuccess>
+    <calculation expression="&quot;Grade F&quot;" stage="Students.Grade" />
+  </stage>
+  <stage stageid="7b230a8e-1460-4a7a-9d74-4c05b8ca9142" name="Percentage Invalid" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="165" y="165" />
+    <onsuccess>c336e903-e871-4bf3-811b-346c256cf003</onsuccess>
+    <calculation expression="&quot;Percentage Invalid&quot;" stage="Students.Grade" />
+  </stage>
+  <stage stageid="5125183f-3d47-4b26-95fc-28a1cfc6ced1" name="Students" type="Collection">
+    <display x="405" y="-75" w="150" h="90" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Name" type="text" description="Name of the Student" />
+      <field name="Percentage" type="number" description="Percentage Obtained" />
+      <field name="Grade" type="text" description="Grade" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Name" type="text" value="Sarthak Sarode" />
+        <field name="Percentage" type="number" value="87" />
+        <field name="Grade" type="text" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Ashutosh Lembhe" />
+        <field name="Percentage" type="number" value="88" />
+        <field name="Grade" type="text" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Jack Ma" />
+        <field name="Percentage" type="number" value="77" />
+        <field name="Grade" type="text" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Elon Musk" />
+        <field name="Percentage" type="number" value="98" />
+        <field name="Grade" type="text" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Raghav Vishwanath" />
+        <field name="Percentage" type="number" value="93" />
+        <field name="Grade" type="text" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="e1a870fb-a2de-4b23-8d20-878db24a073b" name="Loop Start1" type="LoopStart">
+    <loginhibit onsuccess="true" />
+    <display x="90" y="-240" />
+    <onsuccess>1ed25121-b08e-48f1-a990-d3f03adba5f5</onsuccess>
+    <groupid>f90a27ed-826f-4410-b696-00e29a043ebf</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Students</loopdata>
+  </stage>
+  <stage stageid="c336e903-e871-4bf3-811b-346c256cf003" name="Loop End1" type="LoopEnd">
+    <loginhibit onsuccess="true" />
+    <display x="285" y="90" />
+    <onsuccess>d2b8ed3f-b02b-41f1-a618-2be59ab03b9a</onsuccess>
+    <groupid>f90a27ed-826f-4410-b696-00e29a043ebf</groupid>
+  </stage>
+</process>

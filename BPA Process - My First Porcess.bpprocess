@@ -1,0 +1,63 @@
+﻿<process name="My First Porcess" version="1.0" bpversion="7.0.1.49890" narrative="" byrefcollection="true" preferredid="d5bf98ec-6ce8-48ac-bb35-45be27e53104">
+  <view>
+    <camerax>8</camerax>
+    <cameray>-147</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="6ad0f478-87f1-4098-96ac-68d083e4b490" name="Start" type="Start">
+    <display x="0" y="-255" />
+    <onsuccess>f1e8ba9d-e8bb-4708-928c-a60e1e53349b</onsuccess>
+  </stage>
+  <stage stageid="4124b1ae-efcd-4291-bc64-1b085b053a86" name="End" type="End">
+    <display x="0" y="-15" />
+  </stage>
+  <stage stageid="5f2e846b-3f4e-4cb9-b689-3973f8d9472c" name="Stage1" type="ProcessInfo">
+    <display x="-210" y="-270" w="150" h="90" />
+  </stage>
+  <stage stageid="0f518608-3ea7-4fe8-bcc7-7fe21cda0b22" name="Addition" type="Calculation">
+    <display x="0" y="-150" />
+    <onsuccess>b6430322-8b4e-4fb5-8f9c-dc0a0aa3474d</onsuccess>
+    <calculation expression="[Data2]+[Data3]" stage="Data1" />
+  </stage>
+  <stage stageid="967c1fe5-ba9d-4b82-91eb-541ae51ff142" name="Data1" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="-195" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5c76bb7f-deff-4b30-80f1-627f6eedb7b5" name="Data2" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="90" y="-135" />
+    <datatype>number</datatype>
+    <initialvalue>100</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="24c0bc52-b126-47dd-a376-cb61e919c518" name="Data3" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="195" y="-135" />
+    <datatype>number</datatype>
+    <initialvalue>200</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b6430322-8b4e-4fb5-8f9c-dc0a0aa3474d" name="Division" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="-90" />
+    <onsuccess>4124b1ae-efcd-4291-bc64-1b085b053a86</onsuccess>
+    <calculation expression="[Data1]/[Data2]" stage="Data3" />
+  </stage>
+  <stage stageid="f1e8ba9d-e8bb-4708-928c-a60e1e53349b" name="add &amp; div" type="MultipleCalculation">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="-105" />
+    <onsuccess>4124b1ae-efcd-4291-bc64-1b085b053a86</onsuccess>
+    <steps>
+      <calculation expression="[Data2]+[Data3]" stage="Data1" />
+      <calculation expression="[Data1]/[Data2]" stage="Data3" />
+    </steps>
+  </stage>
+</process>
